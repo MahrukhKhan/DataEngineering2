@@ -190,9 +190,10 @@ wordcloud(words = df_speech_1965$word, freq =  df_speech_1965$freq, min.freq = 1
 long_sentiments <- melt(final_sentiments)
 ## GG PLOTS
 
+
 ggplot(long_sentiments, aes(Index, value*100, fill = variable)) +
   geom_bar(position='stack', stat ='identity') +
-  #facet_wrap(~Index, ncol = 2, scales = "free_x") +
+  labs(y= 'Sentiment Score', x= 'Talk') +
   theme_bw()
 
 # AWS Detect Entities
