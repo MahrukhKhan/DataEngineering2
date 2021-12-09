@@ -19,7 +19,7 @@ if (identical(keyfile, character(0))){
   stop("ERROR: AWS key file not found")
 }
 
-keyTable <- read.csv(keyfile, header = T) # *accessKeys.csv == the CSV downloaded from AWS containing your Access & Secret keys
+keyTable <- read.csv(keyfile, header = T) 
 AWS_ACCESS_KEY_ID <- as.character(keyTable$Access.key.ID)
 AWS_SECRET_ACCESS_KEY <- as.character(keyTable$Secret.access.key)
 
